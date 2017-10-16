@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		276C056F1F8EE28D004BE167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C056E1F8EE28D004BE167 /* AppDelegate.swift */; };
-		276C05711F8EE28D004BE167 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C05701F8EE28D004BE167 /* ViewController.swift */; };
+		276C05711F8EE28D004BE167 /* receivingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C05701F8EE28D004BE167 /* receivingVC.swift */; };
 		276C05741F8EE28D004BE167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C05721F8EE28D004BE167 /* Main.storyboard */; };
 		276C05761F8EE28D004BE167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276C05751F8EE28D004BE167 /* Assets.xcassets */; };
 		276C05791F8EE28D004BE167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276C05771F8EE28D004BE167 /* LaunchScreen.storyboard */; };
 		276C05841F8EE28D004BE167 /* DelegateMayhemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C05831F8EE28D004BE167 /* DelegateMayhemTests.swift */; };
 		276C058F1F8EE28D004BE167 /* DelegateMayhemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C058E1F8EE28D004BE167 /* DelegateMayhemUITests.swift */; };
+		276C059D1F8EE397004BE167 /* SendingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C059C1F8EE397004BE167 /* SendingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		276C056B1F8EE28D004BE167 /* DelegateMayhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelegateMayhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276C056E1F8EE28D004BE167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		276C05701F8EE28D004BE167 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		276C05701F8EE28D004BE167 /* receivingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = receivingVC.swift; sourceTree = "<group>"; };
 		276C05731F8EE28D004BE167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		276C05751F8EE28D004BE167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276C05781F8EE28D004BE167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		276C058A1F8EE28D004BE167 /* DelegateMayhemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelegateMayhemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		276C058E1F8EE28D004BE167 /* DelegateMayhemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateMayhemUITests.swift; sourceTree = "<group>"; };
 		276C05901F8EE28D004BE167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276C059C1F8EE397004BE167 /* SendingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				276C056E1F8EE28D004BE167 /* AppDelegate.swift */,
-				276C05701F8EE28D004BE167 /* ViewController.swift */,
+				276C05701F8EE28D004BE167 /* receivingVC.swift */,
+				276C059C1F8EE397004BE167 /* SendingVC.swift */,
 				276C05721F8EE28D004BE167 /* Main.storyboard */,
 				276C05751F8EE28D004BE167 /* Assets.xcassets */,
 				276C05771F8EE28D004BE167 /* LaunchScreen.storyboard */,
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276C05711F8EE28D004BE167 /* ViewController.swift in Sources */,
+				276C05711F8EE28D004BE167 /* receivingVC.swift in Sources */,
+				276C059D1F8EE397004BE167 /* SendingVC.swift in Sources */,
 				276C056F1F8EE28D004BE167 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FEW6T6TFJQ;
 				INFOPLIST_FILE = DelegateMayhem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "chengen-zheng.DelegateMayhem";
@@ -441,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FEW6T6TFJQ;
 				INFOPLIST_FILE = DelegateMayhem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "chengen-zheng.DelegateMayhem";

@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--ReceivingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="receivingVC" customModule="DelegateMayhem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-h8-TvW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Tks-bI-Abb"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="receivingVC" id="GjY-u6-WHY">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="z5l-vG-WBr">
+                                            <connections>
+                                                <segue destination="YB0-5C-IXZ" kind="show" identifier="showSendingVC" id="X8g-U5-V0k"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the &quot;+&quot; to add and send text using delegates!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCO-bU-cmf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="588"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WYK-h8-TvW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7SR-34-PUT"/>
+                            <constraint firstItem="WYK-h8-TvW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N6I-y4-re1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCO-bU-cmf" secondAttribute="bottom" constant="15" id="T3v-eY-wCU"/>
+                            <constraint firstItem="WYK-h8-TvW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d1f-js-msd"/>
+                            <constraint firstItem="fCO-bU-cmf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g7J-IK-7Ql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fCO-bU-cmf" secondAttribute="trailing" id="tBN-fQ-TUt"/>
+                            <constraint firstItem="fCO-bU-cmf" firstAttribute="top" secondItem="WYK-h8-TvW" secondAttribute="bottom" constant="20" id="vvA-d7-tB1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="receivingLabel" destination="fCO-bU-cmf" id="1q9-03-3wa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-68" y="98.50074962518741"/>
+        </scene>
+        <!--SendingVC-->
+        <scene sceneID="nn1-5Y-sy8">
+            <objects>
+                <viewController id="YB0-5C-IXZ" customClass="SendingVC" customModule="DelegateMayhem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TdE-j7-pfu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to enter some text! " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goy-DB-5NK">
+                                <rect key="frame" x="0.0" y="70" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sLj-a1-r5Y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl1-kG-x9W">
+                                <rect key="frame" x="0.0" y="160" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.64322024828767121" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pIe-Mv-hZI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendBtnwasPressed:" destination="YB0-5C-IXZ" eventType="touchUpInside" id="5Nx-ss-W1l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zl1-kG-x9W" firstAttribute="top" secondItem="goy-DB-5NK" secondAttribute="bottom" constant="30" id="66A-HR-Bpy"/>
+                            <constraint firstItem="Zl1-kG-x9W" firstAttribute="leading" secondItem="Udc-GR-ENg" secondAttribute="leading" id="Cnj-Sb-3gy"/>
+                            <constraint firstItem="goy-DB-5NK" firstAttribute="top" secondItem="Udc-GR-ENg" secondAttribute="top" constant="50" id="X5B-v1-Uyo"/>
+                            <constraint firstItem="goy-DB-5NK" firstAttribute="leading" secondItem="Udc-GR-ENg" secondAttribute="leading" id="bjg-wJ-NY5"/>
+                            <constraint firstItem="Zl1-kG-x9W" firstAttribute="trailing" secondItem="Udc-GR-ENg" secondAttribute="trailing" id="gTI-IW-zvc"/>
+                            <constraint firstItem="Udc-GR-ENg" firstAttribute="trailing" secondItem="goy-DB-5NK" secondAttribute="trailing" id="udr-zc-WGH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Udc-GR-ENg"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataEntryTextField" destination="goy-DB-5NK" id="xGn-JC-nBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acz-wa-ZWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="99"/>
         </scene>
     </scenes>
 </document>
